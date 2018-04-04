@@ -9,8 +9,9 @@ import { Contrato } from '../domain/contrato';
 export class ContratoComponent implements OnInit {
 
   contratos : Contrato[];
-  constructor(private contratoService : ContratoService) { }
-
+  constructor(private contratoService : ContratoService) { 
+ this.getContratos();
+}
   ngOnInit() {
   }
 
@@ -22,8 +23,8 @@ getContratos(){
   .subscribe(response =>{
 
 //Recebe Json
-   this.contratos = response[""];
-   console.log(this.contratos);
+   this.contratos = response;
+   console.log(response);
   })
 }
 
