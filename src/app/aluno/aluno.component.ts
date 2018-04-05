@@ -20,7 +20,7 @@ getAluno(){
   this.AlunoService.getAluno()
   .subscribe(response => {
 
-    this.alunos = response;
+    this.alunos = response["data"];
     console.log(response);
   })
 }
