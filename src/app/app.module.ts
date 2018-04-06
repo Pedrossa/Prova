@@ -13,11 +13,17 @@ import { HttpClientModule } from '@angular/common/http';
 import { CategoriaService } from './services/categoria.service';
 import { CategoriaComponent } from './categoria/categoria.component';
 
+import { ClientesComponent } from './clientes/clientes.component';
+import { ClientesService } from './services/clientes.service';
+
 @NgModule({
   declarations: [
     AppComponent,
     
-   CategoriaComponent
+   CategoriaComponent,
+   ClientesComponent
+   
+  
   ],
   imports: [
     BrowserModule,
@@ -25,7 +31,7 @@ import { CategoriaComponent } from './categoria/categoria.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [CategoriaService],
+  providers: [ClientesService, CategoriaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

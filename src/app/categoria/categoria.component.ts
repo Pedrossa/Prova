@@ -20,7 +20,7 @@ getCategoria(){
   this.categoriaService.getCategoria()
   .subscribe(response => {
 
-    this.categorias = response["Categoria"];
+    this.categorias = response;
     console.log(response);
   })
 }
