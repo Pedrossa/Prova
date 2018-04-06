@@ -9,18 +9,18 @@ import { CategoriaService } from '../services/categoria.service';
 })
 export class CategoriaComponent implements OnInit {
     
-  categoria : Categoria[];
-  constructor(private CategoriaService : CategoriaService) { 
+  categorias : Categoria[];
+  constructor(private categoriaService : CategoriaService) { 
 this.getCategoria();
 
 }
   ngOnInit() {
   }
 getCategoria(){
-  this.CategoriaService.getCategoria()
+  this.categoriaService.getCategoria()
   .subscribe(response => {
 
-    this.categoria = response["data"];
+    this.categorias = response["Categoria"];
     console.log(response);
   })
 }
