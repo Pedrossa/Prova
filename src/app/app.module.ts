@@ -8,14 +8,16 @@ import { AppRoutingModule } from './/app-routing.module';
 
 import {FormsModule} from'@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { AlunoComponent } from './aluno/aluno.component';
-import { AlunoService } from './services/aluno.service';
+
+
+import { CategoriaService } from './services/categoria.service';
+import { CategoriaComponent } from './categoria/categoria.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     
-    AlunoComponent
+   CategoriaComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +25,7 @@ import { AlunoService } from './services/aluno.service';
     FormsModule,
     HttpClientModule
   ],
-  providers: [AlunoService],
+  providers: [CategoriaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
